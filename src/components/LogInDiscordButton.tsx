@@ -15,5 +15,5 @@ export default function LogInDiscord() {
     });
   }
 
-  return <button onClick={() => signIn()}>LogIn</button>
+  return <button className='btn btn-primary w-fit' onClick={() => signIn()}>Discord でログイン</button>
 }

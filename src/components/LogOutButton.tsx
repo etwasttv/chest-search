@@ -14,5 +14,5 @@ export default function LogOutDiscordButton() {
     router.refresh();
   }
 
-  return <button onClick={signOut}>LogOut</button>
+  return <button className='text-error font-bold text-nowrap' onClick={signOut}>Log out</button>
 }

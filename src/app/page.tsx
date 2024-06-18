@@ -1,5 +1,3 @@
-import LogOutDiscordButton from '@/components/LogOutButton';
-import Link from 'next/link';
 import { createClient } from '@/utils/supabase/server';
 
 export default async function Home() {
@@ -11,15 +9,6 @@ export default async function Home() {
 
   return (
     <>
-      { user
-      ? <>
-          {user.user_metadata.full_name}
-          <LogOutDiscordButton/>
-        </>
-      : <>
-          <Link href="/login">LOGIN PAGE</Link>
-        </>
-      }
     </>
   );
 }
