@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="jp" className='h-full' data-theme='dark'>
       <body className={classNames(inter.className, 'h-full', 'flex', 'flex-col')}>
         <MenuBar/>
-        <main className='w-full h-full'>
+        <main className='w-full h-full overflow-auto'>
           {children}
         </main>
       </body>
