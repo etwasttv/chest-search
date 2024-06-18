@@ -2,15 +2,15 @@
 
 import { createClient } from '@/utils/supabase/client';
 
-export default function LogInDiscord() {
+export default function LogInDiscord({ host }: { host: string }) {
 
-  const supabase = createClient()
+  const supabase = createClient();
 
   async function signIn() {
     await supabase.auth.signInWithOAuth({
       provider: 'discord',
       options: {
-        redirectTo: 'http://localhost:3000/api/auth/callback',
+        redirectTo: `${host}/api/auth/callback`,
       }
     });
   }
