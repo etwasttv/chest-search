@@ -8,7 +8,7 @@ export default function ChestDataTable() {
   const [chestDatas, setChestDatas] = useState<ChestData[]>([]);
 
   async function getChestData() {
-    const res = await fetch('/api/spreadsheet/all');
+    const res = await fetch('/api/spreadsheet');
     setChestDatas(await res.json());
   }
 
