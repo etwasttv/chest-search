@@ -3,17 +3,16 @@ import { JWT } from 'google-auth-library';
 import { NextResponse } from 'next/server';
 import { ChestData } from '@/shared/ChestData';
 
-const SCOPES = [
-  'https://www.googleapis.com/auth/spreadsheets',
-  'https://www.googleapis.com/auth/drive.file',
-];
-const jwt = new JWT({
-  email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
-  key: process.env.GOOGLE_PRIVATE_KEY,
-  scopes: SCOPES,
-});
-
 export async function GET() {
+  const SCOPES = [
+    'https://www.googleapis.com/auth/spreadsheets',
+    'https://www.googleapis.com/auth/drive.file',
+  ];
+  const jwt = new JWT({
+    email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
+    key: process.env.GOOGLE_PRIVATE_KEY,
+    scopes: SCOPES,
+  });
   const doc = new GoogleSpreadsheet(process.env.SPREADSHEET_ID!, jwt);
   await doc.loadInfo();
 
