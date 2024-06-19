@@ -3,7 +3,7 @@ import { JWT } from 'google-auth-library';
 import { NextResponse } from 'next/server';
 import { ChestData } from '@/shared/ChestData';
 
-export async function GET() {
+export async function GET(request: Request) {
   const SCOPES = [
     'https://www.googleapis.com/auth/spreadsheets',
     'https://www.googleapis.com/auth/drive.file',
