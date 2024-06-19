@@ -10,7 +10,7 @@ export async function GET(request: Request) {
   ];
   const jwt = new JWT({
     email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
-    key: process.env.GOOGLE_PRIVATE_KEY,
+    key: process.env.GOOGLE_PRIVATE_KEY!.replace(/\\n/g, "\n"),
     scopes: SCOPES,
   });
   const doc = new GoogleSpreadsheet(process.env.SPREADSHEET_ID!, jwt);
