@@ -5,8 +5,10 @@ import { Canvas } from '@react-three/fiber';
 
 export default function WareHouseCanvas() {
   return (
-    <Canvas>
-      <WareHouse/>
-    </Canvas>
+    <div className='h-full'>
+      <Canvas resize={{debounce: 0}}>
+        <WareHouse/>
+      </Canvas>
+    </div>
   )
 }

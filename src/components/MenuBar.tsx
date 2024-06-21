@@ -1,12 +1,6 @@
-import { createClient } from '@/utils/supabase/server';
 import Link from 'next/link';
 
 export default async function MenuBar() {
-
-  const supabase = createClient();
-
-  const { data: { user }} = await supabase.auth.getUser();
-
   return (
     <div className='bg-base-300 w-full'>
       <nav className='flex items-baseline gap-6 h-full p-2'>
@@ -16,7 +10,7 @@ export default async function MenuBar() {
           {/* <li>Chest Search</li> */}
         </ul>
 
-        <Link href='/chest'>倉庫</Link>
+        <Link href='/chest/map'>倉庫</Link>
 
       </nav>
     </div>

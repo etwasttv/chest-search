@@ -1,35 +1,41 @@
 'use client';
 
-import AxisIndicator from '@/components/three/AxisIndicator';
 import ChestSection from '@/components/three/ChestSection';
 import ToExchangeText from '@/components/three/Text/ToExchange';
 import ToWorldSpawnText from '@/components/three/Text/ToWorldSpawn';
-import { Gltf, MapControls, Text3D } from '@react-three/drei';
+import { Gltf, OrbitControls, Stats } from '@react-three/drei';
 import { useThree } from '@react-three/fiber';
 import { useEffect } from 'react';
-import { Color, Vector3 } from 'three';
+import { Vector3 } from 'three';
 
 export default function WareHouse() {
   const { camera } = useThree();
   
   useEffect(() => {
     //  カメラの初期位置
-    camera.position.setX(15);
-    camera.position.setY(20);
+    camera.position.setX(20);
+    camera.position.setY(15);
     camera.position.setZ(20);
   }, []);
 
   return (
     <>
-      <MapControls
+      <OrbitControls
         onEnd={(e) => {
           console.log('end');
         }}
+        onStart={(e) => {
+          console.log('start');
+        }}
+        camera={camera}
       />
-      <directionalLight position={[30, 20, 20]} intensity={5}/>
-      <directionalLight position={[-30, 20, -20]} intensity={5}/>
-      <AxisIndicator position={[0, 7, 0]}/>
-      <Gltf src="/gltf/storage/storage.gltf"/>
+      <directionalLight position={[30, 20, 20]} intensity={1}/>
+      <directionalLight position={[-30, 20, 20]} intensity={1}/>
+      <directionalLight position={[30, 20, -20]} intensity={1}/>
+      <directionalLight position={[-30, 20, -20]} intensity={1}/>
+      <Gltf src="/gltf/storage/storage_opt.glb" position={[0, 0, 0]}/>
+      {/* <Stats/> */}
+      <axesHelper args={[5]} position={[0, 2, 0]}/>
       <ToExchangeText/>
       <ToWorldSpawnText/>
 

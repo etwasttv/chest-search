@@ -1,8 +1,14 @@
 'use client';
 import { ChestData } from '@/shared/ChestData';
-import { ReactNode, createContext, useContext, useEffect, useState } from 'react'
+import { Dispatch, ReactNode, SetStateAction, createContext, useContext, useEffect, useState } from 'react'
 
-const WareHouseContext = createContext<ChestData[]>(null!);
+type WareHouseContext = {
+  chestData: ChestData[];
+  selectedChestId: string|null;
+  setSelectedChestId: Dispatch<SetStateAction<string | null>>;
+}
+
+const WareHouseContext = createContext<WareHouseContext>(null!);
 
 export function useWareHouseContext() {
   return useContext(WareHouseContext);
@@ -10,6 +16,7 @@ export function useWareHouseContext() {
 
 export function WareHouseProvider({ children }: { children: ReactNode } ) {
   const [chestDatas, setChestDatas] = useState<ChestData[]>([]);
+  const [selectedChestId, setSelectedChestId] = useState<string|null>(null);
 
   async function getChestData() {
     const res = await fetch('/api/spreadsheet');
@@ -21,7 +28,7 @@ export function WareHouseProvider({ children }: { children: ReactNode } ) {
   }, []);
 
   return (
-    <WareHouseContext.Provider value={chestDatas}>
+    <WareHouseContext.Provider value={{chestData: chestDatas, selectedChestId, setSelectedChestId}}>
       {children}
     </WareHouseContext.Provider>
   )
