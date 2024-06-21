@@ -26,10 +26,10 @@ export default function ChestSection({ section, position, rotation = 0}: ChestSe
       rotation={[0, rotation, 0]}
     >
       <LargeChest section={section} idx={1} position={[0, 1, 0]}/>
-      <LargeChest section={section} idx={1} position={[0, 2, 0]}/>
-      <LargeChest section={section} idx={1} position={[0, 3, 0]}/>
-      <LargeChest section={section} idx={1} position={[0, 4, 0]}/>
-      <LargeChest section={section} idx={1} position={[0, 5, 0]}/>
+      <LargeChest section={section} idx={2} position={[0, 2, 0]}/>
+      <LargeChest section={section} idx={3} position={[0, 3, 0]}/>
+      <LargeChest section={section} idx={4} position={[0, 4, 0]}/>
+      <LargeChest section={section} idx={5} position={[0, 5, 0]}/>
     </group>
   )
 }

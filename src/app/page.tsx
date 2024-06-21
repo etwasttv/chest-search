@@ -1,18 +1,12 @@
-import ChestDataTable from '@/components/ChestDataTable';
-import { createClient } from '@/utils/supabase/server';
-import { redirect } from 'next/navigation';
+import { WareHouseProvider } from '@/components/contextProvider/WareHouseProvider';
+import WareHouseCanvas from '@/components/three/WareHouseCanvas';
 
-export default async function Home() {
-  const supabase = createClient();
-
-  const { data: { user }} = await supabase.auth.getUser();
-
-  if (!user)
-    redirect('/login');
-
+export default async function ChestMap() {
   return (
-    <div className='flex'>
-      <ChestDataTable/>
+    <div className='h-full'>
+      <WareHouseProvider>
+        <WareHouseCanvas/>
+      </WareHouseProvider>
     </div>
   );
 }

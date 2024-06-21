@@ -11,12 +11,12 @@ import { Color, Vector3 } from 'three';
 
 export default function WareHouse() {
   const { camera } = useThree();
-
+  
   useEffect(() => {
     //  カメラの初期位置
-    camera.position.setX(30);
-    camera.position.setY(30);
-    camera.position.setZ(40);
+    camera.position.setX(15);
+    camera.position.setY(20);
+    camera.position.setZ(20);
   }, []);
 
   return (
@@ -34,15 +34,15 @@ export default function WareHouse() {
       <ToWorldSpawnText/>
 
       {/* A */}
-      <ChestSection section='A1'  position={new Vector3( 22, 0, 12)} rotation={Math.PI}/>
-      <ChestSection section='A2'  position={new Vector3( 20, 0, 12)} rotation={Math.PI}/>
-      <ChestSection section='A3'  position={new Vector3( 18, 0, 12)} rotation={Math.PI}/>
-      <ChestSection section='A4'  position={new Vector3( 16, 0, 12)} rotation={Math.PI}/>
-      <ChestSection section='A5'  position={new Vector3( 10, 0, 12)} rotation={Math.PI}/>
-      <ChestSection section='A6'  position={new Vector3(  8, 0, 12)} rotation={Math.PI}/>
-      <ChestSection section='A7'  position={new Vector3(  6, 0, 12)} rotation={Math.PI}/>
-      <ChestSection section='A8'  position={new Vector3(  4, 0, 12)} rotation={Math.PI}/>
-      <ChestSection section='A9'  position={new Vector3( -4, 0, 12)} rotation={Math.PI}/>
+      <ChestSection section='A01'  position={new Vector3( 22, 0, 12)} rotation={Math.PI}/>
+      <ChestSection section='A02'  position={new Vector3( 20, 0, 12)} rotation={Math.PI}/>
+      <ChestSection section='A03'  position={new Vector3( 18, 0, 12)} rotation={Math.PI}/>
+      <ChestSection section='A04'  position={new Vector3( 16, 0, 12)} rotation={Math.PI}/>
+      <ChestSection section='A05'  position={new Vector3( 10, 0, 12)} rotation={Math.PI}/>
+      <ChestSection section='A06'  position={new Vector3(  8, 0, 12)} rotation={Math.PI}/>
+      <ChestSection section='A07'  position={new Vector3(  6, 0, 12)} rotation={Math.PI}/>
+      <ChestSection section='A08'  position={new Vector3(  4, 0, 12)} rotation={Math.PI}/>
+      <ChestSection section='A09'  position={new Vector3( -4, 0, 12)} rotation={Math.PI}/>
       <ChestSection section='A10' position={new Vector3( -6, 0, 12)} rotation={Math.PI}/>
       <ChestSection section='A11' position={new Vector3( -8, 0, 12)} rotation={Math.PI}/>
       <ChestSection section='A12' position={new Vector3(-10, 0, 12)} rotation={Math.PI}/>
@@ -52,15 +52,15 @@ export default function WareHouse() {
       <ChestSection section='A16' position={new Vector3(-22, 0, 12)} rotation={Math.PI}/>
 
       {/* B */}
-      <ChestSection section='B1'  position={new Vector3( 22, 0, 10)}/>
-      <ChestSection section='B2'  position={new Vector3( 20, 0, 10)}/>
-      <ChestSection section='B3'  position={new Vector3( 18, 0, 10)}/>
-      <ChestSection section='B4'  position={new Vector3( 16, 0, 10)}/>
-      <ChestSection section='B5'  position={new Vector3( 10, 0, 10)}/>
-      <ChestSection section='B6'  position={new Vector3(  8, 0, 10)}/>
-      <ChestSection section='B7'  position={new Vector3(  6, 0, 10)}/>
-      <ChestSection section='B8'  position={new Vector3(  4, 0, 10)}/>
-      <ChestSection section='B9'  position={new Vector3( -4, 0, 10)}/>
+      <ChestSection section='B01'  position={new Vector3( 22, 0, 10)}/>
+      <ChestSection section='B02'  position={new Vector3( 20, 0, 10)}/>
+      <ChestSection section='B03'  position={new Vector3( 18, 0, 10)}/>
+      <ChestSection section='B04'  position={new Vector3( 16, 0, 10)}/>
+      <ChestSection section='B05'  position={new Vector3( 10, 0, 10)}/>
+      <ChestSection section='B06'  position={new Vector3(  8, 0, 10)}/>
+      <ChestSection section='B07'  position={new Vector3(  6, 0, 10)}/>
+      <ChestSection section='B08'  position={new Vector3(  4, 0, 10)}/>
+      <ChestSection section='B09'  position={new Vector3( -4, 0, 10)}/>
       <ChestSection section='B10' position={new Vector3( -6, 0, 10)}/>
       <ChestSection section='B11' position={new Vector3( -8, 0, 10)}/>
       <ChestSection section='B12' position={new Vector3(-10, 0, 10)}/>
@@ -70,15 +70,15 @@ export default function WareHouse() {
       <ChestSection section='B16' position={new Vector3(-22, 0, 10)}/>
 
       {/* C */}
-      <ChestSection section='C1'  position={new Vector3( 22, 0, 5)} rotation={Math.PI}/>
-      <ChestSection section='C2'  position={new Vector3( 20, 0, 5)} rotation={Math.PI}/>
-      <ChestSection section='C3'  position={new Vector3( 18, 0, 5)} rotation={Math.PI}/>
-      <ChestSection section='C4'  position={new Vector3( 16, 0, 5)} rotation={Math.PI}/>
-      <ChestSection section='C5'  position={new Vector3( 10, 0, 5)} rotation={Math.PI}/>
-      <ChestSection section='C6'  position={new Vector3(  8, 0, 5)} rotation={Math.PI}/>
-      <ChestSection section='C7'  position={new Vector3(  6, 0, 5)} rotation={Math.PI}/>
-      <ChestSection section='C8'  position={new Vector3(  4, 0, 5)} rotation={Math.PI}/>
-      <ChestSection section='C9'  position={new Vector3( -4, 0, 5)} rotation={Math.PI}/>
+      <ChestSection section='C01'  position={new Vector3( 22, 0, 5)} rotation={Math.PI}/>
+      <ChestSection section='C02'  position={new Vector3( 20, 0, 5)} rotation={Math.PI}/>
+      <ChestSection section='C03'  position={new Vector3( 18, 0, 5)} rotation={Math.PI}/>
+      <ChestSection section='C04'  position={new Vector3( 16, 0, 5)} rotation={Math.PI}/>
+      <ChestSection section='C05'  position={new Vector3( 10, 0, 5)} rotation={Math.PI}/>
+      <ChestSection section='C06'  position={new Vector3(  8, 0, 5)} rotation={Math.PI}/>
+      <ChestSection section='C07'  position={new Vector3(  6, 0, 5)} rotation={Math.PI}/>
+      <ChestSection section='C08'  position={new Vector3(  4, 0, 5)} rotation={Math.PI}/>
+      <ChestSection section='C09'  position={new Vector3( -4, 0, 5)} rotation={Math.PI}/>
       <ChestSection section='C10' position={new Vector3( -6, 0, 5)} rotation={Math.PI}/>
       <ChestSection section='C11' position={new Vector3( -8, 0, 5)} rotation={Math.PI}/>
       <ChestSection section='C12' position={new Vector3(-10, 0, 5)} rotation={Math.PI}/>
@@ -88,15 +88,15 @@ export default function WareHouse() {
       <ChestSection section='C16' position={new Vector3(-22, 0, 5)} rotation={Math.PI}/>
 
       {/* D */}
-      <ChestSection section='D1'  position={new Vector3( 22, 0, 3)}/>
-      <ChestSection section='D2'  position={new Vector3( 20, 0, 3)}/>
-      <ChestSection section='D3'  position={new Vector3( 18, 0, 3)}/>
-      <ChestSection section='D4'  position={new Vector3( 16, 0, 3)}/>
-      <ChestSection section='D5'  position={new Vector3( 10, 0, 3)}/>
-      <ChestSection section='D6'  position={new Vector3(  8, 0, 3)}/>
-      <ChestSection section='D7'  position={new Vector3(  6, 0, 3)}/>
-      <ChestSection section='D8'  position={new Vector3(  4, 0, 3)}/>
-      <ChestSection section='D9'  position={new Vector3( -4, 0, 3)}/>
+      <ChestSection section='D01'  position={new Vector3( 22, 0, 3)}/>
+      <ChestSection section='D02'  position={new Vector3( 20, 0, 3)}/>
+      <ChestSection section='D03'  position={new Vector3( 18, 0, 3)}/>
+      <ChestSection section='D04'  position={new Vector3( 16, 0, 3)}/>
+      <ChestSection section='D05'  position={new Vector3( 10, 0, 3)}/>
+      <ChestSection section='D06'  position={new Vector3(  8, 0, 3)}/>
+      <ChestSection section='D07'  position={new Vector3(  6, 0, 3)}/>
+      <ChestSection section='D08'  position={new Vector3(  4, 0, 3)}/>
+      <ChestSection section='D09'  position={new Vector3( -4, 0, 3)}/>
       <ChestSection section='D10' position={new Vector3( -6, 0, 3)}/>
       <ChestSection section='D11' position={new Vector3( -8, 0, 3)}/>
       <ChestSection section='D12' position={new Vector3(-10, 0, 3)}/>
@@ -106,15 +106,15 @@ export default function WareHouse() {
       <ChestSection section='D16' position={new Vector3(-22, 0, 3)}/>
 
       {/* E */}
-      <ChestSection section='E1'  position={new Vector3( 22, 0, -3)} rotation={Math.PI}/>
-      <ChestSection section='E2'  position={new Vector3( 20, 0, -3)} rotation={Math.PI}/>
-      <ChestSection section='E3'  position={new Vector3( 18, 0, -3)} rotation={Math.PI}/>
-      <ChestSection section='E4'  position={new Vector3( 16, 0, -3)} rotation={Math.PI}/>
-      <ChestSection section='E5'  position={new Vector3( 10, 0, -3)} rotation={Math.PI}/>
-      <ChestSection section='E6'  position={new Vector3(  8, 0, -3)} rotation={Math.PI}/>
-      <ChestSection section='E7'  position={new Vector3(  6, 0, -3)} rotation={Math.PI}/>
-      <ChestSection section='E8'  position={new Vector3(  4, 0, -3)} rotation={Math.PI}/>
-      <ChestSection section='E9'  position={new Vector3( -4, 0, -3)} rotation={Math.PI}/>
+      <ChestSection section='E01'  position={new Vector3( 22, 0, -3)} rotation={Math.PI}/>
+      <ChestSection section='E02'  position={new Vector3( 20, 0, -3)} rotation={Math.PI}/>
+      <ChestSection section='E03'  position={new Vector3( 18, 0, -3)} rotation={Math.PI}/>
+      <ChestSection section='E04'  position={new Vector3( 16, 0, -3)} rotation={Math.PI}/>
+      <ChestSection section='E05'  position={new Vector3( 10, 0, -3)} rotation={Math.PI}/>
+      <ChestSection section='E06'  position={new Vector3(  8, 0, -3)} rotation={Math.PI}/>
+      <ChestSection section='E07'  position={new Vector3(  6, 0, -3)} rotation={Math.PI}/>
+      <ChestSection section='E08'  position={new Vector3(  4, 0, -3)} rotation={Math.PI}/>
+      <ChestSection section='E09'  position={new Vector3( -4, 0, -3)} rotation={Math.PI}/>
       <ChestSection section='E10' position={new Vector3( -6, 0, -3)} rotation={Math.PI}/>
       <ChestSection section='E11' position={new Vector3( -8, 0, -3)} rotation={Math.PI}/>
       <ChestSection section='E12' position={new Vector3(-10, 0, -3)} rotation={Math.PI}/>
@@ -124,15 +124,15 @@ export default function WareHouse() {
       <ChestSection section='E16' position={new Vector3(-22, 0, -3)} rotation={Math.PI}/>
 
       {/* F */}
-      <ChestSection section='F1'  position={new Vector3( 22, 0, -5)}/>
-      <ChestSection section='F2'  position={new Vector3( 20, 0, -5)}/>
-      <ChestSection section='F3'  position={new Vector3( 18, 0, -5)}/>
-      <ChestSection section='F4'  position={new Vector3( 16, 0, -5)}/>
-      <ChestSection section='F5'  position={new Vector3( 10, 0, -5)}/>
-      <ChestSection section='F6'  position={new Vector3(  8, 0, -5)}/>
-      <ChestSection section='F7'  position={new Vector3(  6, 0, -5)}/>
-      <ChestSection section='F8'  position={new Vector3(  4, 0, -5)}/>
-      <ChestSection section='F9'  position={new Vector3( -4, 0, -5)}/>
+      <ChestSection section='F01'  position={new Vector3( 22, 0, -5)}/>
+      <ChestSection section='F02'  position={new Vector3( 20, 0, -5)}/>
+      <ChestSection section='F03'  position={new Vector3( 18, 0, -5)}/>
+      <ChestSection section='F04'  position={new Vector3( 16, 0, -5)}/>
+      <ChestSection section='F05'  position={new Vector3( 10, 0, -5)}/>
+      <ChestSection section='F06'  position={new Vector3(  8, 0, -5)}/>
+      <ChestSection section='F07'  position={new Vector3(  6, 0, -5)}/>
+      <ChestSection section='F08'  position={new Vector3(  4, 0, -5)}/>
+      <ChestSection section='F09'  position={new Vector3( -4, 0, -5)}/>
       <ChestSection section='F10' position={new Vector3( -6, 0, -5)}/>
       <ChestSection section='F11' position={new Vector3( -8, 0, -5)}/>
       <ChestSection section='F12' position={new Vector3(-10, 0, -5)}/>
@@ -142,15 +142,15 @@ export default function WareHouse() {
       <ChestSection section='F16' position={new Vector3(-22, 0, -5)}/>
 
       {/* G */}
-      <ChestSection section='G1'  position={new Vector3( 22, 0, -10)} rotation={Math.PI}/>
-      <ChestSection section='G2'  position={new Vector3( 20, 0, -10)} rotation={Math.PI}/>
-      <ChestSection section='G3'  position={new Vector3( 18, 0, -10)} rotation={Math.PI}/>
-      <ChestSection section='G4'  position={new Vector3( 16, 0, -10)} rotation={Math.PI}/>
-      <ChestSection section='G5'  position={new Vector3( 10, 0, -10)} rotation={Math.PI}/>
-      <ChestSection section='G6'  position={new Vector3(  8, 0, -10)} rotation={Math.PI}/>
-      <ChestSection section='G7'  position={new Vector3(  6, 0, -10)} rotation={Math.PI}/>
-      <ChestSection section='G8'  position={new Vector3(  4, 0, -10)} rotation={Math.PI}/>
-      <ChestSection section='G9'  position={new Vector3( -4, 0, -10)} rotation={Math.PI}/>
+      <ChestSection section='G01'  position={new Vector3( 22, 0, -10)} rotation={Math.PI}/>
+      <ChestSection section='G02'  position={new Vector3( 20, 0, -10)} rotation={Math.PI}/>
+      <ChestSection section='G03'  position={new Vector3( 18, 0, -10)} rotation={Math.PI}/>
+      <ChestSection section='G04'  position={new Vector3( 16, 0, -10)} rotation={Math.PI}/>
+      <ChestSection section='G05'  position={new Vector3( 10, 0, -10)} rotation={Math.PI}/>
+      <ChestSection section='G06'  position={new Vector3(  8, 0, -10)} rotation={Math.PI}/>
+      <ChestSection section='G07'  position={new Vector3(  6, 0, -10)} rotation={Math.PI}/>
+      <ChestSection section='G08'  position={new Vector3(  4, 0, -10)} rotation={Math.PI}/>
+      <ChestSection section='G09'  position={new Vector3( -4, 0, -10)} rotation={Math.PI}/>
       <ChestSection section='G10' position={new Vector3( -6, 0, -10)} rotation={Math.PI}/>
       <ChestSection section='G11' position={new Vector3( -8, 0, -10)} rotation={Math.PI}/>
       <ChestSection section='G12' position={new Vector3(-10, 0, -10)} rotation={Math.PI}/>
@@ -160,15 +160,15 @@ export default function WareHouse() {
       <ChestSection section='G16' position={new Vector3(-22, 0, -10)} rotation={Math.PI}/>
 
       {/* H */}
-      <ChestSection section='H1'  position={new Vector3( 22, 0, -12)}/>
-      <ChestSection section='H2'  position={new Vector3( 20, 0, -12)}/>
-      <ChestSection section='H3'  position={new Vector3( 18, 0, -12)}/>
-      <ChestSection section='H4'  position={new Vector3( 16, 0, -12)}/>
-      <ChestSection section='H5'  position={new Vector3( 10, 0, -12)}/>
-      <ChestSection section='H6'  position={new Vector3(  8, 0, -12)}/>
-      <ChestSection section='H7'  position={new Vector3(  6, 0, -12)}/>
-      <ChestSection section='H8'  position={new Vector3(  4, 0, -12)}/>
-      <ChestSection section='H9'  position={new Vector3( -4, 0, -12)}/>
+      <ChestSection section='H01'  position={new Vector3( 22, 0, -12)}/>
+      <ChestSection section='H02'  position={new Vector3( 20, 0, -12)}/>
+      <ChestSection section='H03'  position={new Vector3( 18, 0, -12)}/>
+      <ChestSection section='H04'  position={new Vector3( 16, 0, -12)}/>
+      <ChestSection section='H05'  position={new Vector3( 10, 0, -12)}/>
+      <ChestSection section='H06'  position={new Vector3(  8, 0, -12)}/>
+      <ChestSection section='H07'  position={new Vector3(  6, 0, -12)}/>
+      <ChestSection section='H08'  position={new Vector3(  4, 0, -12)}/>
+      <ChestSection section='H09'  position={new Vector3( -4, 0, -12)}/>
       <ChestSection section='H10' position={new Vector3( -6, 0, -12)}/>
       <ChestSection section='H11' position={new Vector3( -8, 0, -12)}/>
       <ChestSection section='H12' position={new Vector3(-10, 0, -12)}/>
