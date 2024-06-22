@@ -1,7 +1,6 @@
 'use client';
 
 import { Text3D } from '@react-three/drei';
-import { useThree } from '@react-three/fiber';
 
 export default function ToExchangeText() {
   
