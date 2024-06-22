@@ -1,6 +1,11 @@
-export default function Home() {
+import { WareHouseProvider } from '@/components/contextProvider/WareHouseProvider';
+import WareHouseCanvas from '@/components/three/WareHouseCanvas';
+
+export default async function ChestMap() {
+
   return (
-    <div>
-    </div>
-  )
+    <WareHouseProvider>
+      <WareHouseCanvas/>
+    </WareHouseProvider>
+  );
 }

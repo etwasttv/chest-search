@@ -10,7 +10,7 @@ export default async function MenuBar() {
           {/* <li>Chest Search</li> */}
         </ul>
 
-        <Link href='/chest/map'>倉庫</Link>
+        <Link href='/chest/table'>チェスト（表データ）</Link>
 
       </nav>
     </div>

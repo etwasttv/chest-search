@@ -1,7 +1,7 @@
 import { useWareHouseContext } from '@/components/contextProvider/WareHouseProvider';
 import { Gltf, Line } from '@react-three/drei'
 import { ThreeElements } from '@react-three/fiber';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export type LargeChestProps = ThreeElements['mesh'] & {
   section: string;
@@ -14,11 +14,14 @@ export default function LargeChest({ section, idx, ...props }: LargeChestProps) 
   
   const chestId = `${section}-${idx}`;
 
-  const { chestData, selectedChestId, setSelectedChestId } = useWareHouseContext();
+  const { selectedChestId, setSelectedChestId } = useWareHouseContext();
   const [isHovered, setIsHovered] = useState<boolean>(false);
   const isSelected = selectedChestId === chestId;
-  const chestItem = chestData.filter(c => c.chestId === chestId);
   const SELECTED_FRAME_COLOR = isSelected ? "#58d401" : "#AAAAAA";
+
+  useEffect(() => {
+    document.body.style.cursor = isHovered ? 'pointer' : 'auto'
+}, [isHovered]);
 
   return (
     <mesh

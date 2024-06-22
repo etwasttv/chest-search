@@ -1,25 +1,27 @@
 'use client';
 
+import { useWareHouseContext } from '@/components/contextProvider/WareHouseProvider';
+import ChestItemPane from '@/components/three/ChestItemPane';
 import ChestSection from '@/components/three/ChestSection';
 import ToExchangeText from '@/components/three/Text/ToExchange';
 import ToWorldSpawnText from '@/components/three/Text/ToWorldSpawn';
-import { Gltf, OrbitControls, Stats } from '@react-three/drei';
+import { Gltf, Html, OrbitControls, Stats } from '@react-three/drei';
 import { useThree } from '@react-three/fiber';
-import { useEffect } from 'react';
 import { Vector3 } from 'three';
 
 export default function WareHouse() {
-  const { camera } = useThree();
-  
-  useEffect(() => {
-    //  カメラの初期位置
-    camera.position.setX(20);
-    camera.position.setY(15);
-    camera.position.setZ(20);
-  }, []);
+  const { camera, size } = useThree();
+  const { getChestData, selectedChestId } = useWareHouseContext();
+
+  console.log(size);
 
   return (
     <>
+      <Html
+        calculatePosition={(e, c) => [0, size.height/2]}
+      >
+        {selectedChestId && <ChestItemPane selectedChestId={selectedChestId} chestData={getChestData(selectedChestId)}/>}
+      </Html>
       <OrbitControls
         onEnd={(e) => {
           console.log('end');
@@ -35,7 +37,7 @@ export default function WareHouse() {
       <directionalLight position={[-30, 20, -20]} intensity={1}/>
       <Gltf src="/gltf/storage/storage_opt.glb" position={[0, 0, 0]}/>
       {/* <Stats/> */}
-      <axesHelper args={[5]} position={[0, 2, 0]}/>
+      {/* <axesHelper args={[5]} position={[0, 2, 0]}/> */}
       <ToExchangeText/>
       <ToWorldSpawnText/>
 
