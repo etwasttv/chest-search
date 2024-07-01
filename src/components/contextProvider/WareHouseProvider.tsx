@@ -35,5 +35,3 @@ export function WareHouseProvider({ children }: { children: ReactNode|undefined 
     </WareHouseContext.Provider>
   )
 }
-
-export const fetchCache = 'force-no-store';
