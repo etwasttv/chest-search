@@ -21,7 +21,7 @@ export function WareHouseProvider({ children }: { children: ReactNode|undefined 
   const getChestData = (chestId: string) => chestDatas.filter(c => c.chestId === chestId);
 
   async function getChestDatas() {
-    const res = await fetch('/api/spreadsheet', { cache: 'no-cache' });
+    const res = await fetch('/api/spreadsheet', { cache: 'no-store' });
     setChestDatas(await res.json());
   }
 
