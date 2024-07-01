@@ -23,7 +23,7 @@ export default function RootLayout({
         <main className='w-full h-full overflow-auto'>
           {children}
         </main>
-        <span className='fixed bottom-0 right-0 text-sm select-none'>1.0.1-alpha</span>
+        <span className='fixed bottom-0 right-0 text-sm select-none'>1.0.2-alpha</span>
       </body>
     </html>
   );
